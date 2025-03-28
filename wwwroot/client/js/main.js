@@ -1,8 +1,6 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
-    // Для локального тестування, якщо сервер запущений локально, розкоментуй наступний рядок:
+    // Якщо потрібне локальне тестування, розкоментуй:
     // const serverUrl = "http://localhost:51754/api";
-
-    // Використовується віддалений сервер за замовчуванням:
     const serverUrl = "https://dotamania.bsite.net/api";
 
     const containerList = document.getElementById('containerList');
@@ -15,8 +13,8 @@
             .then(data => {
                 containerList.innerHTML = '';
                 containerCount.innerText = `Total Items: ${data.length}`;
+
                 data.forEach(container => {
-                    // Створення картки контейнера
                     const card = document.createElement('div');
                     card.className = 'container-item';
 
@@ -47,7 +45,8 @@
 
                     containerList.appendChild(card);
                 });
-                // Після завантаження ховаємо індикатор і показуємо сітку
+
+                // Приховуємо loading і показуємо сітку
                 loadingIndicator.style.display = 'none';
                 containerList.style.display = 'grid';
             })
@@ -58,7 +57,7 @@
             });
     }
 
-    // Функція для створення білої заглушки (64x64)
+    // Створення білої заглушки 64×64
     function createWhitePlaceholderBase64() {
         const size = 64;
         const canvas = document.createElement('canvas');
