@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YcLKdIjxkpCC/5yuni3WxZkBqhaVSNMxnJTMNYqUlgY=",
+  "Hash": "r2IOldo6gDOLItQkDwszpzKQWbZHMibjishntgkBNPI=",
   "Source": "dota-mania-site",
   "BasePath": "_content/dota-mania-site",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9mka3i1km6",
-      "Integrity": "H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=",
+      "Fingerprint": "vyfzb9vuut",
+      "Integrity": "l1pz37YbB78F8GpMfWpUjZlXNtHqKXCoT7robJy0QYQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\client\\index.html"
@@ -267,51 +267,6 @@
       ]
     },
     {
-      "Route": "client/index.9mka3i1km6.html",
-      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3340"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:30:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9mka3i1km6"
-        },
-        {
-          "Name": "label",
-          "Value": "client/index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk="
-        }
-      ]
-    },
-    {
       "Route": "client/index.html",
       "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
       "Selectors": [],
@@ -322,7 +277,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3340"
+          "Value": "3641"
         },
         {
           "Name": "Content-Type",
@@ -330,11 +285,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=\""
+          "Value": "\"l1pz37YbB78F8GpMfWpUjZlXNtHqKXCoT7robJy0QYQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:30:37 GMT"
+          "Value": "Fri, 28 Mar 2025 16:35:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -344,7 +299,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk="
+          "Value": "sha256-l1pz37YbB78F8GpMfWpUjZlXNtHqKXCoT7robJy0QYQ="
+        }
+      ]
+    },
+    {
+      "Route": "client/index.vyfzb9vuut.html",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l1pz37YbB78F8GpMfWpUjZlXNtHqKXCoT7robJy0QYQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 16:35:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vyfzb9vuut"
+        },
+        {
+          "Name": "label",
+          "Value": "client/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l1pz37YbB78F8GpMfWpUjZlXNtHqKXCoT7robJy0QYQ="
         }
       ]
     },

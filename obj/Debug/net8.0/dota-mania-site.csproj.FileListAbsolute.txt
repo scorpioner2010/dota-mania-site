@@ -28,3 +28,9 @@ A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\obj\Debug\net8.0\dota-m
 A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\obj\Debug\net8.0\dota-mania-site.genruntimeconfig.cache
 A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\obj\Debug\net8.0\ref\dota-mania-site.dll
 A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\obj\Debug\net8.0\dota-mania-site.sourcelink.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\web.config
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\appsettings.Development.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\appsettings.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\dota-mania-site.deps.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\dota-mania-site.runtimeconfig.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\bin\Debug\net8.0\out\dota-mania-site.staticwebassets.endpoints.json
