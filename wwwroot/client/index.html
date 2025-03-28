@@ -33,26 +33,23 @@
             color: #fff;
             margin-bottom: 20px;
         }
-        /* Сітка для контейнерів:
-           - Використовуємо repeat(auto-fit, minmax(200px, 1fr)) для адаптивності.
-           - Максимальна кількість колонок (якщо ширина дозволяє) задається через max-width контейнера.
-           - justify-content: center для центровання, якщо елементів менше 5.
-        */
+        /* Flex-контейнер для елементів */
         #containerList {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            justify-content: center;
-            grid-gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Центрування рядка */
+            gap: 20px;
             width: 100%;
-            max-width: 1200px; /* Якщо 5 колонок, кожна мінімум 200px + 4*20px = 1200px */
+            max-width: 1200px; /* Для приблизно 5 елементів */
         }
-        /* Стиль картки контейнера з пропорцією 1:2 */
+        /* Стиль картки контейнера з пропорцією 1:2 та фіксованою шириною */
         .container-item {
             background: linear-gradient(135deg, #FFA500, #FFFF00);
             border: 4px solid #FF5722;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             overflow: hidden;
+            width: 240px; /* Фіксована ширина */
             aspect-ratio: 1 / 2;
             display: flex;
             flex-direction: column;
@@ -98,7 +95,7 @@
 <body>
 <h2>Items</h2>
 <div id="loading">Loading items...</div>
-<!-- Сітка контейнерів, яка спочатку прихована -->
+<!-- Контейнер для елементів -->
 <div id="containerList" style="display: none;"></div>
 <div id="containerCount"></div>
 <script src="/client/js/main.js"></script>
