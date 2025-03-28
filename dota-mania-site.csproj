@@ -7,4 +7,8 @@
     <RootNamespace>dota_mania_site</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\main.js" />
+  </ItemGroup>
+
 </Project>

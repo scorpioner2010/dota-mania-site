@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kr0Fb9Vmhj7SBxC7RWM0jBjVL0sJv2kXVV6/FA5JSWQ=",
+  "Hash": "YcLKdIjxkpCC/5yuni3WxZkBqhaVSNMxnJTMNYqUlgY=",
   "Source": "dota-mania-site",
   "BasePath": "_content/dota-mania-site",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\index.html",
+      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\index.html",
       "SourceId": "dota-mania-site",
       "SourceType": "Discovered",
       "ContentRoot": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\",
       "BasePath": "_content/dota-mania-site",
-      "RelativePath": "index#[.{fingerprint}]?.html",
+      "RelativePath": "admin/index#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7veuads0qv",
-      "Integrity": "PfujvyAiifWPRomWPXUo553UdR5tAqZtO3SW1WpOWLI=",
+      "Fingerprint": "jaurx70dr4",
+      "Integrity": "G0+wH9yFLJoouhHJyMxMsZHmhYQ+r6rFk/fgViW4Lwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\index.html"
+      "OriginalItemSpec": "wwwroot\\admin\\index.html"
     },
     {
-      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\js\\main.js",
+      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\js\\main.js",
       "SourceId": "dota-mania-site",
       "SourceType": "Discovered",
       "ContentRoot": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\",
       "BasePath": "_content/dota-mania-site",
-      "RelativePath": "js/main#[.{fingerprint}]?.js",
+      "RelativePath": "admin/js/main#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,17 +52,59 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hgaaw1fb2h",
-      "Integrity": "cceKyJ672r8dDrj3S/gLT3d/usxJSxxANmvGf4RrqH4=",
+      "Fingerprint": "64w3sd8jhb",
+      "Integrity": "qgqBRwTjHuq8MFmg8r726beD5mzsvd3Mm5FDZIQHlo4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\main.js"
+      "OriginalItemSpec": "wwwroot\\admin\\js\\main.js"
+    },
+    {
+      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
+      "SourceId": "dota-mania-site",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\",
+      "BasePath": "_content/dota-mania-site",
+      "RelativePath": "client/index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9mka3i1km6",
+      "Integrity": "H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\client\\index.html"
+    },
+    {
+      "Identity": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\js\\main.js",
+      "SourceId": "dota-mania-site",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\",
+      "BasePath": "_content/dota-mania-site",
+      "RelativePath": "client/js/main#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ppchqg0xcp",
+      "Integrity": "Y8vYSncpZ621wWpH1bvdARqt6xKcnG4i3ojCShAaLAk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\client\\js\\main.js"
     }
   ],
   "Endpoints": [
     {
-      "Route": "index.7veuads0qv.html",
-      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\index.html",
+      "Route": "admin/index.html",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -71,7 +113,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2730"
+          "Value": "2537"
         },
         {
           "Name": "Content-Type",
@@ -79,56 +121,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PfujvyAiifWPRomWPXUo553UdR5tAqZtO3SW1WpOWLI=\""
+          "Value": "\"G0+wH9yFLJoouhHJyMxMsZHmhYQ+r6rFk/fgViW4Lwg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 07:16:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7veuads0qv"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PfujvyAiifWPRomWPXUo553UdR5tAqZtO3SW1WpOWLI="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2730"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PfujvyAiifWPRomWPXUo553UdR5tAqZtO3SW1WpOWLI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 07:16:25 GMT"
+          "Value": "Fri, 28 Mar 2025 08:47:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -138,13 +135,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PfujvyAiifWPRomWPXUo553UdR5tAqZtO3SW1WpOWLI="
+          "Value": "sha256-G0+wH9yFLJoouhHJyMxMsZHmhYQ+r6rFk/fgViW4Lwg="
         }
       ]
     },
     {
-      "Route": "js/main.hgaaw1fb2h.js",
-      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\js\\main.js",
+      "Route": "admin/index.jaurx70dr4.html",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -153,19 +150,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8887"
+          "Value": "2537"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/html"
         },
         {
           "Name": "ETag",
-          "Value": "\"cceKyJ672r8dDrj3S/gLT3d/usxJSxxANmvGf4RrqH4=\""
+          "Value": "\"G0+wH9yFLJoouhHJyMxMsZHmhYQ+r6rFk/fgViW4Lwg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 07:17:18 GMT"
+          "Value": "Fri, 28 Mar 2025 08:47:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -175,21 +172,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hgaaw1fb2h"
+          "Value": "jaurx70dr4"
         },
         {
           "Name": "label",
-          "Value": "js/main.js"
+          "Value": "admin/index.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cceKyJ672r8dDrj3S/gLT3d/usxJSxxANmvGf4RrqH4="
+          "Value": "sha256-G0+wH9yFLJoouhHJyMxMsZHmhYQ+r6rFk/fgViW4Lwg="
         }
       ]
     },
     {
-      "Route": "js/main.js",
-      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\js\\main.js",
+      "Route": "admin/js/main.64w3sd8jhb.js",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\js\\main.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -198,7 +195,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8887"
+          "Value": "7733"
         },
         {
           "Name": "Content-Type",
@@ -206,11 +203,56 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cceKyJ672r8dDrj3S/gLT3d/usxJSxxANmvGf4RrqH4=\""
+          "Value": "\"qgqBRwTjHuq8MFmg8r726beD5mzsvd3Mm5FDZIQHlo4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 07:17:18 GMT"
+          "Value": "Fri, 28 Mar 2025 07:57:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "64w3sd8jhb"
+        },
+        {
+          "Name": "label",
+          "Value": "admin/js/main.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qgqBRwTjHuq8MFmg8r726beD5mzsvd3Mm5FDZIQHlo4="
+        }
+      ]
+    },
+    {
+      "Route": "admin/js/main.js",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7733"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qgqBRwTjHuq8MFmg8r726beD5mzsvd3Mm5FDZIQHlo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 07:57:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -220,7 +262,171 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cceKyJ672r8dDrj3S/gLT3d/usxJSxxANmvGf4RrqH4="
+          "Value": "sha256-qgqBRwTjHuq8MFmg8r726beD5mzsvd3Mm5FDZIQHlo4="
+        }
+      ]
+    },
+    {
+      "Route": "client/index.9mka3i1km6.html",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:30:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9mka3i1km6"
+        },
+        {
+          "Name": "label",
+          "Value": "client/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk="
+        }
+      ]
+    },
+    {
+      "Route": "client/index.html",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:30:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/7BO8IVg1OUtA04W0alj9hvsJUXh61vrsz4ghrmtpk="
+        }
+      ]
+    },
+    {
+      "Route": "client/js/main.js",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y8vYSncpZ621wWpH1bvdARqt6xKcnG4i3ojCShAaLAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:30:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y8vYSncpZ621wWpH1bvdARqt6xKcnG4i3ojCShAaLAk="
+        }
+      ]
+    },
+    {
+      "Route": "client/js/main.ppchqg0xcp.js",
+      "AssetFile": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y8vYSncpZ621wWpH1bvdARqt6xKcnG4i3ojCShAaLAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:30:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ppchqg0xcp"
+        },
+        {
+          "Name": "label",
+          "Value": "client/js/main.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y8vYSncpZ621wWpH1bvdARqt6xKcnG4i3ojCShAaLAk="
         }
       ]
     }
