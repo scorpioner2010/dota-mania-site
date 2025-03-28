@@ -8,7 +8,7 @@ var adminPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "admin"
 var adminDefaultFilesOptions = new DefaultFilesOptions
 {
     FileProvider = new PhysicalFileProvider(adminPath),
-    RequestPath = "/admin00987789mania"
+    RequestPath = "/admin-dotka-mania"
 };
 adminDefaultFilesOptions.DefaultFileNames.Clear();
 adminDefaultFilesOptions.DefaultFileNames.Add("index.html");
@@ -16,7 +16,7 @@ app.UseDefaultFiles(adminDefaultFilesOptions);
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(adminPath),
-    RequestPath = "/admin00987789mania"
+    RequestPath = "/admin-dotka-mania"
 });
 
 // Налаштування для клієнтського інтерфейсу
