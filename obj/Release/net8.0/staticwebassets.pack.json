@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\index.html",
+      "PackagePath": "staticwebassets\\admin\\index.html"
+    },
+    {
+      "Id": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+    },
+    {
+      "Id": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\index.html",
+      "PackagePath": "staticwebassets\\client\\index.html"
+    },
+    {
+      "Id": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\wwwroot\\client\\js\\main.js",
+      "PackagePath": "staticwebassets\\client\\js\\main.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.dota-mania-site.props",
+      "PackagePath": "build\\dota-mania-site.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.dota-mania-site.props",
+      "PackagePath": "buildMultiTargeting\\dota-mania-site.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.dota-mania-site.props",
+      "PackagePath": "buildTransitive\\dota-mania-site.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.dota-mania-site.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.dota-mania-site.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dota-mania-site
+    runtime: dotnet
+    env: production
+    buildCommand: "dotnet publish -c Release -o out"
+    startCommand: "dotnet out/dota-mania-site.dll"

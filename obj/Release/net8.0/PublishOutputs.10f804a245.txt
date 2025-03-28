@@ -1,0 +1,7 @@
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\dota-mania-site.exe
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\appsettings.Development.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\appsettings.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\dota-mania-site.dll
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\dota-mania-site.deps.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\dota-mania-site.runtimeconfig.json
+A:\CodeFolder\Unity\dotamaniagithubpages\dota-mania-site\out\dota-mania-site.pdb
