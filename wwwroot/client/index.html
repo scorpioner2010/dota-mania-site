@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Client Interface</title>
     <style>
-        /* Градієнтовий фон для всієї сторінки */
+        /* Стилі залишаються незмінними */
         html, body {
             margin: 0;
             padding: 0;
@@ -21,46 +21,27 @@
             padding: 20px;
             color: #333;
         }
-
         h2 {
             text-align: center;
             color: #fff;
             margin-bottom: 20px;
         }
-
-        /* Індикатор завантаження */
         #loading {
             font-size: 1.5em;
             color: #fff;
             margin-bottom: 20px;
         }
-
-        /*
-          Сітка з фіксованими картками (240×480),
-          максимум 5 колонок у рядку.
-          Якщо елементів менше 5 — вони по центру.
-          Якщо більше 5 — з'явиться новий ряд, теж по центру.
-        */
         #containerList {
             display: grid;
-            /* 
-               auto-fit + minmax(240px, 240px) означає:
-               - Кожна колонка рівно 240px завширшки
-               - Може бути від 1 до 5 колонок, залежно від кількості елементів
-                 (але обмежимося медіа-запитом нижче).
-            */
             grid-template-columns: repeat(auto-fit, 240px);
-            grid-auto-rows: 480px;        /* Висота рядка 480px */
-            gap: 20px;                    /* Відступи між картками */
-            justify-content: center;      /* Горизонтальне вирівнювання по центру */
-            align-items: start;           /* По верху */
+            grid-auto-rows: 480px;
+            gap: 20px;
+            justify-content: center;
+            align-items: start;
             width: 100%;
-            max-width: 1280px;           /* Щоб при 5 картках не розтягувалось більше ніж 5*240 + відступи */
+            max-width: 1280px;
             margin: 0 auto;
-            /* Спочатку приховано (див. main.js) */
         }
-
-        /* Картка фіксованого розміру 240×480 */
         .container-item {
             width: 240px;
             height: 480px;
@@ -72,11 +53,9 @@
             display: flex;
             flex-direction: column;
         }
-
-        /* Верхня частина (зображення) - половина */
         .container-image {
             width: 100%;
-            height: 50%; /* 240px */
+            height: 50%;
             overflow: hidden;
         }
         .container-image img {
@@ -84,11 +63,9 @@
             height: 100%;
             object-fit: cover;
         }
-
-        /* Нижня частина (текст) - половина */
         .container-content {
             width: 100%;
-            height: 50%; /* 240px */
+            height: 50%;
             padding: 10px;
             box-sizing: border-box;
             display: flex;
@@ -107,7 +84,6 @@
             color: #424242;
             text-align: center;
         }
-
         #containerCount {
             text-align: center;
             margin-top: 20px;
@@ -121,6 +97,76 @@
 <div id="loading">Loading items...</div>
 <div id="containerList" style="display: none;"></div>
 <div id="containerCount"></div>
-<script src="/client/js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Використовуємо локальний серверний URL
+        const serverUrl = "http://localhost:51754/api";
+
+        const containerList = document.getElementById('containerList');
+        const containerCount = document.getElementById('containerCount');
+        const loadingIndicator = document.getElementById('loading');
+
+        function loadContainers() {
+            fetch(`${serverUrl}/containers`)
+                .then(res => res.json())
+                .then(data => {
+                    containerList.innerHTML = '';
+                    containerCount.innerText = `Total Items: ${data.length}`;
+                    data.forEach(container => {
+                        const card = document.createElement('div');
+                        card.className = 'container-item';
+
+                        const imageDiv = document.createElement('div');
+                        imageDiv.className = 'container-image';
+                        const img = document.createElement('img');
+                        if (container.imageBase64) {
+                            img.src = `data:image/png;base64,${container.imageBase64}`;
+                        } else {
+                            img.src = 'data:image/png;base64,' + createWhitePlaceholderBase64();
+                        }
+                        imageDiv.appendChild(img);
+                        card.appendChild(imageDiv);
+
+                        const content = document.createElement('div');
+                        content.className = 'container-content';
+
+                        const nameEl = document.createElement('h3');
+                        nameEl.className = 'container-name';
+                        nameEl.innerText = container.name;
+                        content.appendChild(nameEl);
+
+                        const descEl = document.createElement('p');
+                        descEl.className = 'container-desc';
+                        descEl.innerText = container.description;
+                        content.appendChild(descEl);
+
+                        card.appendChild(content);
+                        containerList.appendChild(card);
+                    });
+                    loadingIndicator.style.display = 'none';
+                    containerList.style.display = 'grid';
+                })
+                .catch(err => {
+                    console.error('Error loading containers:', err);
+                    containerList.innerText = 'Error loading containers.';
+                    loadingIndicator.style.display = 'none';
+                });
+        }
+
+        function createWhitePlaceholderBase64() {
+            const size = 64;
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, size, size);
+            return canvas.toDataURL('image/png').split(',')[1];
+        }
+
+        loadContainers();
+    });
+</script>
 </body>
 </html>

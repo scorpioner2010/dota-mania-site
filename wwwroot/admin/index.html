@@ -1,87 +1,343 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-    <meta charset="utf-8" />
-    <title>Admin Interface</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Адмін Панель - Контейнери</title>
     <style>
+        /* Загальні стилі */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: sans-serif;
-            margin: 0;
-            display: flex;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            padding: 20px;
         }
-        #leftPanel {
-            width: 40%;
-            background: #3f3f3f;
-            color: #fff;
-            padding: 10px;
-            box-sizing: border-box;
+        h1, h2 { margin-bottom: 15px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* Loading Bar */
+        #loadingBar {
+            width: 100%;
+            height: 4px;
+            background: #007BFF;
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: loadingAnimation 1s linear infinite;
+            display: none;
+            z-index: 1000;
         }
-        #rightPanel {
-            width: 60%;
-            background: #ccc;
-            padding: 10px;
-            box-sizing: border-box;
+        @keyframes loadingAnimation {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
         }
-        .container-item {
-            background: #2f2f2f;
-            border: 2px solid #4caf50;
+
+        /* Форма додавання контейнера */
+        .form-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .form-section input[type="text"],
+        .form-section textarea,
+        .form-section input[type="file"] {
+            width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        .container-item img {
-            max-width: 80px;
-            display: block;
-            margin-bottom: 5px;
+        .form-section button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        #previewImage {
-            max-width: 80px;
-            max-height: 80px;
-            border: 1px solid #000;
-            margin: 10px 0;
+        .form-section button:hover { background: #0056b3; }
+        #status { margin-top: 10px; font-weight: bold; }
+
+        /* Список контейнерів */
+        .cards-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        #status {
-            margin-top: 20px;
-            font-weight: bold;
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
         }
-        #containerCount {
-            color: red;
-            font-weight: bold;
-            margin-top: 10px;
+        .card.fade-out { opacity: 0; }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+        }
+        .card-body h3 { margin-bottom: 10px; font-size: 1.2em; }
+        .card-body p { font-size: 0.95em; }
+        .card-footer {
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+        .card-footer button {
+            padding: 8px 12px;
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card-footer button:hover { background: #c82333; }
+        button:disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        @media (max-width: 600px) {
+            .card img { height: 120px; }
         }
     </style>
 </head>
 <body>
-<!-- Ліва панель: список контейнерів -->
-<div id="leftPanel">
-    <h2>Containers List</h2>
-    <div id="containerList"></div>
-    <div id="containerCount"></div>
+<!-- Loading Bar -->
+<div id="loadingBar"></div>
+
+<div class="container">
+    <header>
+        <h1>Адмін Панель</h1>
+        <h2>Керування контейнерами</h2>
+    </header>
+    <!-- Форма додавання -->
+    <section class="form-section">
+        <h2>Додати новий контейнер</h2>
+        <input type="text" id="nameInput" placeholder="Назва контейнера">
+        <textarea id="descInput" placeholder="Опис контейнера"></textarea>
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="sendBtn">Додати контейнер</button>
+        <div id="status"></div>
+    </section>
+    <!-- Список контейнерів -->
+    <section>
+        <h2>Список контейнерів (<span id="containerCount">0</span>)</h2>
+        <div class="cards-section" id="containerList">
+            <!-- Контейнери з'являться тут -->
+        </div>
+    </section>
 </div>
 
-<!-- Права панель: управління контейнерами -->
-<div id="rightPanel">
-    <h2>Upload / Remove Container</h2>
-    <div>
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" placeholder="Container name..." />
-    </div>
-    <div style="margin-top: 10px;">
-        <label for="descInput">Description:</label>
-        <input type="text" id="descInput" placeholder="Description..." />
-    </div>
-    <div style="margin-top: 10px;">
-        <button id="loadBtn">Load Image</button>
-        <input type="file" id="imageInput" accept="image/*" style="display:none" />
-        <img id="previewImage" alt="No image selected" />
-    </div>
-    <div style="margin-top: 10px;">
-        <button id="sendBtn">Send</button>
-        <button id="removeBtn">Remove</button>
-    </div>
-    <div id="status"></div>
-</div>
-<!-- Підключаємо адмінський скрипт -->
-<script src="js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const serverUrl = "http://localhost:51754/api";
+        const containerList = document.getElementById('containerList');
+        const containerCount = document.getElementById('containerCount');
+        const nameInput = document.getElementById('nameInput');
+        const descInput = document.getElementById('descInput');
+        const imageInput = document.getElementById('imageInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const statusEl = document.getElementById('status');
+        const loadingBar = document.getElementById('loadingBar');
+
+        let selectedFile = null;
+        let isRequestInProgress = false;
+
+        function setFormDisabled(disabled) {
+            sendBtn.disabled = disabled;
+            nameInput.disabled = disabled;
+            descInput.disabled = disabled;
+            imageInput.disabled = disabled;
+        }
+
+        function showLoadingBar() {
+            loadingBar.style.display = 'block';
+        }
+
+        function hideLoadingBar() {
+            loadingBar.style.display = 'none';
+        }
+
+        // Завантаження контейнерів
+        function loadContainers() {
+            fetch(`${serverUrl}/containers`)
+                .then(res => res.json())
+                .then(data => {
+                    containerList.innerHTML = '';
+                    containerCount.innerText = data.length;
+                    data.forEach(container => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.dataset.id = container.id;
+
+                        const img = document.createElement('img');
+                        if (container.imageBase64) {
+                            img.src = `data:image/png;base64,${container.imageBase64}`;
+                        } else {
+                            img.src = 'data:image/png;base64,' + createWhitePlaceholderBase64();
+                        }
+                        card.appendChild(img);
+
+                        const cardBody = document.createElement('div');
+                        cardBody.className = 'card-body';
+                        const title = document.createElement('h3');
+                        title.innerText = container.name;
+                        cardBody.appendChild(title);
+                        const desc = document.createElement('p');
+                        desc.innerText = container.description;
+                        cardBody.appendChild(desc);
+                        card.appendChild(cardBody);
+
+                        const cardFooter = document.createElement('div');
+                        cardFooter.className = 'card-footer';
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.innerText = 'Видалити';
+                        deleteBtn.addEventListener('click', () => {
+                            if (isRequestInProgress) return;
+                            if (confirm(`Ви впевнені, що хочете видалити контейнер "${container.name}"?`)) {
+                                deleteBtn.disabled = true;
+                                deleteContainer(container.id, card);
+                            }
+                        });
+                        cardFooter.appendChild(deleteBtn);
+                        card.appendChild(cardFooter);
+
+                        containerList.appendChild(card);
+                    });
+                })
+                .catch(err => {
+                    console.error('Помилка завантаження контейнерів:', err);
+                    containerList.innerText = 'Помилка завантаження контейнерів.';
+                });
+        }
+
+        // Видалення контейнера з анімацією
+        function deleteContainer(id, cardElement) {
+            setFormDisabled(true);
+            isRequestInProgress = true;
+            statusEl.innerText = 'Видалення контейнера...';
+            showLoadingBar();
+            fetch(`${serverUrl}/containers/${id}`, { method: 'DELETE' })
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                    return res.json();
+                })
+                .then(() => {
+                    cardElement.classList.add('fade-out');
+                    setTimeout(() => {
+                        cardElement.remove();
+                        containerCount.innerText = parseInt(containerCount.innerText) - 1;
+                        statusEl.innerText = 'Контейнер видалено успішно!';
+                        setFormDisabled(false);
+                        isRequestInProgress = false;
+                        hideLoadingBar();
+                    }, 500);
+                })
+                .catch(err => {
+                    console.error('Помилка видалення контейнера:', err);
+                    statusEl.innerText = 'Помилка видалення контейнера.';
+                    setFormDisabled(false);
+                    isRequestInProgress = false;
+                    hideLoadingBar();
+                });
+        }
+
+        // Додавання нового контейнера
+        sendBtn.addEventListener('click', () => {
+            if (isRequestInProgress) return;
+            if (!nameInput.value.trim()) {
+                statusEl.innerText = 'Введіть назву контейнера.';
+                return;
+            }
+            let fileToSend = selectedFile;
+            if (!fileToSend) {
+                statusEl.innerText = 'Не обрано зображення. Використовується заглушка.';
+                fileToSend = createWhitePlaceholderBlob();
+            }
+            const formData = new FormData();
+            formData.append('name', nameInput.value.trim());
+            formData.append('description', descInput.value.trim());
+            formData.append('image', fileToSend, 'container.png');
+
+            setFormDisabled(true);
+            isRequestInProgress = true;
+            statusEl.innerText = 'Надсилання контейнера...';
+            showLoadingBar();
+            fetch(`${serverUrl}/containers`, { method: 'POST', body: formData })
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                    return res.json();
+                })
+                .then(() => {
+                    statusEl.innerText = `Контейнер "${nameInput.value}" додано успішно!`;
+                    nameInput.value = '';
+                    descInput.value = '';
+                    imageInput.value = '';
+                    selectedFile = null;
+                    loadContainers();
+                    setFormDisabled(false);
+                    isRequestInProgress = false;
+                    hideLoadingBar();
+                })
+                .catch(err => {
+                    console.error('Помилка надсилання контейнера:', err);
+                    statusEl.innerText = 'Помилка надсилання контейнера.';
+                    setFormDisabled(false);
+                    isRequestInProgress = false;
+                    hideLoadingBar();
+                });
+        });
+
+        imageInput.addEventListener('change', () => {
+            selectedFile = imageInput.files[0] || null;
+        });
+
+        function createWhitePlaceholderBase64() {
+            const size = 64;
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, size, size);
+            return canvas.toDataURL('image/png').split(',')[1];
+        }
+        function createWhitePlaceholderBlob() {
+            const size = 64;
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, size, size);
+            return dataURLtoBlob(canvas.toDataURL('image/png'));
+        }
+        function dataURLtoBlob(dataURL) {
+            const byteString = atob(dataURL.split(',')[1]);
+            const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            return new Blob([ab], { type: mimeString });
+        }
+
+        loadContainers();
+    });
+</script>
 </body>
 </html>

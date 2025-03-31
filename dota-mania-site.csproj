@@ -11,4 +11,9 @@
     <_ContentIncludedByDefault Remove="wwwroot\js\main.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\admin\js\" />
+    <Folder Include="wwwroot\client\js\" />
+  </ItemGroup>
+
 </Project>
