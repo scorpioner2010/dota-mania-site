@@ -1,28 +1,28 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/dota-mania-site/admin/index.1hrdd424yi.html">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\index.html'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1hrdd424yi"},{"Name":"integrity","Value":"sha256-q1a9RZl9UZ3KEDnsVcY1XORIN4JAxXKrR7Rh0YrvEuQ="},{"Name":"label","Value":"_content/dota-mania-site/admin/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13900"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022q1a9RZl9UZ3KEDnsVcY1XORIN4JAxXKrR7Rh0YrvEuQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:25:40 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/dota-mania-site/admin/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-q1a9RZl9UZ3KEDnsVcY1XORIN4JAxXKrR7Rh0YrvEuQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"13900"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022q1a9RZl9UZ3KEDnsVcY1XORIN4JAxXKrR7Rh0YrvEuQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:25:40 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rO1aiDlxEYJ/notjH4ELHdldGnhVbxuBJSj2sKeZVs0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"13964"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022rO1aiDlxEYJ/notjH4ELHdldGnhVbxuBJSj2sKeZVs0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:35:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/dota-mania-site/client/index.3xw1qzx06m.html">
+    <StaticWebAssetEndpoint Include="_content/dota-mania-site/admin/index.kqfc7vd40y.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kqfc7vd40y"},{"Name":"integrity","Value":"sha256-rO1aiDlxEYJ/notjH4ELHdldGnhVbxuBJSj2sKeZVs0="},{"Name":"label","Value":"_content/dota-mania-site/admin/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13964"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022rO1aiDlxEYJ/notjH4ELHdldGnhVbxuBJSj2sKeZVs0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:35:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/dota-mania-site/client/index.9qnau5rgzo.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\client\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3xw1qzx06m"},{"Name":"integrity","Value":"sha256-Gc0gmXSnGmnzPXoWp\u002BAxrTPJ5TKA6m3IydREvHQ9ALM="},{"Name":"label","Value":"_content/dota-mania-site/client/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6001"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Gc0gmXSnGmnzPXoWp\u002BAxrTPJ5TKA6m3IydREvHQ9ALM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:14:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9qnau5rgzo"},{"Name":"integrity","Value":"sha256-X6e0WkRTXUC1fRPQARhENX8TM0KEUVkv4D23F2aRgsI="},{"Name":"label","Value":"_content/dota-mania-site/client/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6065"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022X6e0WkRTXUC1fRPQARhENX8TM0KEUVkv4D23F2aRgsI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:35:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/dota-mania-site/client/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\client\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Gc0gmXSnGmnzPXoWp\u002BAxrTPJ5TKA6m3IydREvHQ9ALM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6001"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Gc0gmXSnGmnzPXoWp\u002BAxrTPJ5TKA6m3IydREvHQ9ALM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:14:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-X6e0WkRTXUC1fRPQARhENX8TM0KEUVkv4D23F2aRgsI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6065"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022X6e0WkRTXUC1fRPQARhENX8TM0KEUVkv4D23F2aRgsI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 31 Mar 2025 09:35:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dota-mania-site")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ca02743da9ffa62644c58f7c6439a508d82b866")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5de2605004bc4270a54a11bea9f2b347d28ef913")]
 [assembly: System.Reflection.AssemblyProductAttribute("dota-mania-site")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dota-mania-site")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

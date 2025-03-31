@@ -8,7 +8,7 @@ var adminPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "admin"
 var adminDefaultFilesOptions = new DefaultFilesOptions
 {
     FileProvider = new PhysicalFileProvider(adminPath),
-    RequestPath = "/admin-dotka-mania"
+    RequestPath = "/kotupidhvist"
 };
 adminDefaultFilesOptions.DefaultFileNames.Clear();
 adminDefaultFilesOptions.DefaultFileNames.Add("index.html");
@@ -16,7 +16,7 @@ app.UseDefaultFiles(adminDefaultFilesOptions);
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(adminPath),
-    RequestPath = "/admin-dotka-mania"
+    RequestPath = "/kotupidhvist"
 });
 
 // Налаштування для клієнтського інтерфейсу
@@ -24,7 +24,7 @@ var clientPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "clien
 var clientDefaultFilesOptions = new DefaultFilesOptions
 {
     FileProvider = new PhysicalFileProvider(clientPath),
-    RequestPath = "/client"
+    RequestPath = "/kurva"
 };
 clientDefaultFilesOptions.DefaultFileNames.Clear();
 clientDefaultFilesOptions.DefaultFileNames.Add("index.html");
@@ -32,10 +32,10 @@ app.UseDefaultFiles(clientDefaultFilesOptions);
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(clientPath),
-    RequestPath = "/client"
+    RequestPath = "/kurva"
 });
 
 // Перенаправлення з кореня на клієнтський інтерфейс
-app.MapGet("/", () => Results.Redirect("/client"));
+app.MapGet("/", () => Results.Redirect("/kotupidhvist"));
 
 app.Run();
