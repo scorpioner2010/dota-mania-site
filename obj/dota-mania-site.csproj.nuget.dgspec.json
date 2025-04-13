@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\dota-mania-site.csproj": {}
+    "A:\\Programing\\Sites\\photolibrary-site\\dota-mania-site.csproj": {}
   },
   "projects": {
-    "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\dota-mania-site.csproj": {
+    "A:\\Programing\\Sites\\photolibrary-site\\dota-mania-site.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\dota-mania-site.csproj",
+        "projectUniqueName": "A:\\Programing\\Sites\\photolibrary-site\\dota-mania-site.csproj",
         "projectName": "dota-mania-site",
-        "projectPath": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\dota-mania-site.csproj",
+        "projectPath": "A:\\Programing\\Sites\\photolibrary-site\\dota-mania-site.csproj",
         "packagesPath": "C:\\Users\\TorasDesktop\\.nuget\\packages\\",
-        "outputPath": "A:\\CodeFolder\\Unity\\dotamaniagithubpages\\dota-mania-site\\obj\\",
+        "outputPath": "A:\\Programing\\Sites\\photolibrary-site\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
